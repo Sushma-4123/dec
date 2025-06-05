@@ -1,0 +1,13 @@
+target:
+ - master
+
+pool:
+ name: Default
+
+steps:
+ - script: echo MyFirst Azure Pipeline for maven project
+   displayName: 'Run a one-line script'
+ - script: mvn clean package
+   displayName: 'Build with maven'
+ - script: java -jar target/MyMavenApp2310-1.0-SNAPSHOT.jar
+   displayName: 'Running jar'
